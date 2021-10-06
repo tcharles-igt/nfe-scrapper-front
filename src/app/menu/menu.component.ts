@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng-lts/api';
 
 @Component({
   selector: 'menu',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  items: MenuItem[];
 
-  ngOnInit(): void {
+  ngOnInit() {
+      this.items = [
+          {
+              label: 'Home',
+              icon: 'pi pi-fw pi-home',
+              routerLink: 'home'
+          }
+      ];
   }
 
 }
