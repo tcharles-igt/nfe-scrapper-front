@@ -1,5 +1,13 @@
-<h1>ESTADO ATUAL DOS SERVIÇOS NFE</h1>
-<div>ultima atualização: {{nRecord.date | date:"dd:MM:yyyy HH:ss"}}</div>
+<p-toolbar>
+    <div class="p-toolbar-group-left">
+        <p-calendar [(ngModel)]="date1" [locale]="es" dateFormat="dd/mm/yy" inputId="spanish"></p-calendar>
+        <button pButton type="button" icon="pi pi-search" iconPos="left" (click)="loadRecord()" ></button>
+
+    </div>
+</p-toolbar>
+
+<h1>SERVIÇOS NFE NA DATA {{nRecord.date | date:'dd/MM/yyyy'}}</h1>
+
 <p-table [value]="states" responsiveLayout="scroll">
     <ng-template pTemplate="header">
         <tr>
