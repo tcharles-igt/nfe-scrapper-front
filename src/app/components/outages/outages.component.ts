@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { State } from '../state.Interface';
-import { ApiService } from '../api.service';
+import { NFEState } from '../../interfaces/nfestate.interface';
+import { ApiService } from '../../services/api.service';
 import {Message} from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
 
@@ -12,7 +12,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class OutagesComponent implements OnInit {
 
-  public state: State
+  public state: NFEState
   public msgs: Message[];
 
   constructor(

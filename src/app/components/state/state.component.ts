@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
-import { Record } from '../record.Interface';
+import { ApiService } from '../../services/api.service';
+import { NFERecord } from '../../interfaces/nferecord.Interface';
 
 
 
@@ -11,7 +11,7 @@ import { Record } from '../record.Interface';
 })
 export class StateComponent implements OnInit {
 
-  public nRecord: Record
+  public nRecord: NFERecord
   public states: any
 
   date1: Date = new Date();

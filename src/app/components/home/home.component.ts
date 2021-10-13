@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Record } from '../record.Interface';
-import { ApiService } from '../api.service';
+import { NFERecord } from '../../interfaces/nferecord.Interface';
+import { ApiService } from '../../services/api.service';
 import { Router } from '@angular/router';
-import { RecordService } from '../record.service';
+import { RecordService } from '../../services/record.service';
 
 @Component({
   selector: 'home',
@@ -11,7 +11,7 @@ import { RecordService } from '../record.service';
 })
 export class HomeComponent implements OnInit {
 
-  public nRecord: Record
+  public nRecord: NFERecord
   public states: any
 
   constructor(private api: ApiService, private recordService: RecordService, private router: Router) { }
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
     this.api.getData()
       .subscribe((response: any) => {
-        this.nRecord = response;
+        this.nRecord = response
         this.states = response.states
       },
       error => {

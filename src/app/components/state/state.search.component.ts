@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { State } from '../state.Interface';
-import { ApiService } from '../api.service';
+import { NFEState } from '../../interfaces/nfestate.interface';
+import { ApiService } from '../../services/api.service';
 
 @Component({
     selector: 'state-search',
@@ -11,8 +11,8 @@ import { ApiService } from '../api.service';
   export class StateSearchComponent implements OnInit {
     name: string
     private sub: any
-    public state: State
-    public states: State[] = []
+    public state: NFEState
+    public states: NFEState[] = []
 
     constructor(private route: ActivatedRoute,private api: ApiService, private router: Router) { 
       this.route.params.subscribe(params => {

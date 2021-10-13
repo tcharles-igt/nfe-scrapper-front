@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Record } from './record.Interface';
+import { NFERecord } from '../interfaces/nferecord.Interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecordService {
 
-  private nRecord: Record;
+  private nRecord: NFERecord;
   constructor() { }
 
-  setAnime(record: Record) {
+  setAnime(record: NFERecord) {
     this.nRecord = record;
   }
   getRecord() {

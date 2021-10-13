@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Record } from './record.Interface';
-import { State } from './state.Interface';
+import { NFERecord } from '../interfaces/nferecord.Interface';
+import { NFEState } from '../interfaces/nfestate.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -13,23 +13,23 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get<Record>(this.url)
+    return this.http.get<NFERecord>(this.url)
   }
 
   getForName(name: string) {
     this.uri = this.url+"/states/"+name
-    return this.http.get<State>(this.uri)
+    return this.http.get<NFEState>(this.uri)
   }
 
   getForDate(date: Date) {
         let dataF = date.getFullYear() + "-" + ((date.getMonth() + 1)) + "-" + ((date.getDate() )) ; 
 
     this.uri = this.url+"/"+dataF
-    return this.http.get<Record>(this.uri)
+    return this.http.get<NFERecord>(this.uri)
   }
 
   getOutages() {
     this.uri = this.url+"/outages"
-    return this.http.get<State>(this.uri)
+    return this.http.get<NFEState>(this.uri)
   }
 }
