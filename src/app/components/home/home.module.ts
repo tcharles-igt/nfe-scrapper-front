@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent} from './home.component';
 import { HomeRoutingModule } from './home.routing.module';
 import {TableModule} from 'primeng/table';
+import { PipesModule } from '../../pipes/pipes.module';
 
 
 
@@ -11,7 +12,8 @@ import {TableModule} from 'primeng/table';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    TableModule
+    TableModule,
+    PipesModule
   ]
 })
 export class HomeModule { }

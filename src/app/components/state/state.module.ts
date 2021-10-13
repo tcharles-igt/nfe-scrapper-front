@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
 import { StateSearchComponent } from './state.search.component';
+import { PipesModule } from '../../pipes/pipes.module';
 
 
 
@@ -22,7 +23,8 @@ import { StateSearchComponent } from './state.search.component';
     FormsModule,
     ReactiveFormsModule,
     TableModule,
-    ButtonModule
+    ButtonModule,
+    PipesModule
 
   ]
 })

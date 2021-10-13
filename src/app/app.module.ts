@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MenubarModule } from 'primeng/menubar';
 import { OutagesComponent } from './components/outages/outages.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

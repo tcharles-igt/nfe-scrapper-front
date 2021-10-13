@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   public nRecord: NFERecord
   public states: any
+  public date:Date = new Date()
 
   constructor(private api: ApiService, private recordService: RecordService, private router: Router) { }
 
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
       .subscribe((response: any) => {
         this.nRecord = response
         this.states = response.states
+        this.date = new Date(this.nRecord.date)
       },
       error => {
         alert("Erro ao carregar o registro")

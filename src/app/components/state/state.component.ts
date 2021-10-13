@@ -13,6 +13,7 @@ export class StateComponent implements OnInit {
 
   public nRecord: NFERecord
   public states: any
+  public date:Date = new Date()
 
   date1: Date = new Date();
   invalidDates: Array<Date>
@@ -54,7 +55,7 @@ export class StateComponent implements OnInit {
       .subscribe((response: any) => {
         this.nRecord = response;
         this.states = response.states
-        this.nRecord.date = this.date1
+        this.date = new Date(this.nRecord.date)
         console.log(this.nRecord);
         },
         error => {
